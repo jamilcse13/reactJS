@@ -3,13 +3,14 @@ import ReactDOM from "react-dom";
 
 // 1st way to declare a component
 // received the param as object
-function Clock({ locale }) {
-  return (
-    <h1 className="heading" tableIndex={index}>
-      <span className="text">Hello {new Date().toLocaleDateStrin(locale)}</span>
-    </h1>
-  );
+function Clock(props) {
+    return (
+      <h1 className="heading" tableIndex={index}>
+        <span className="text">Hello {new Date().toLocaleDateStrin(props.locale)}</span>
+      </h1>
+    );
 }
+
 
 // pass param
 ReactDOM.render(<Clock locale="bn-BD" />, document.getElementById("root"));
