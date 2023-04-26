@@ -5,7 +5,7 @@ import ReactDOM from "react-dom";
 // received the param as object
 function Clock(props) {
     return (
-      <h1 className="heading" tableIndex={index}>
+      <h1 className="heading">
         <span className="text">Hello {new Date().toLocaleDateStrin(props.locale)}</span>
       </h1>
     );
@@ -19,7 +19,7 @@ ReactDOM.render(<Clock locale="bn-BD" />, document.getElementById("root"));
 class Clock {
   print() {
     return (
-      <h1 className="heading" tableIndex={index}>
+      <h1 className="heading">
         <span className="text">
           Hello {new Date().toLocaleDateStrin(this.props.locale)}
         </span>
@@ -41,7 +41,7 @@ ReactDOM.render(<ClockComponent.print />, document.getElementById("root"));
 class Clock extends React.Component {
   render() {
     return (
-      <h1 className="heading" tableIndex={index}>
+      <h1 className="heading">
         <span className="text">
           Hello - {this.props.children} {new Date().toLocaleDateString(this.props.locale)}
         </span>

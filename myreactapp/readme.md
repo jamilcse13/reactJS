@@ -60,4 +60,35 @@
 - We can reuse a component multiple times
 - We can pass attribute to component
 - We should not change the values of props inside the Component
-- 
+
+
+## State:
+- State of a component is the data of the component which is chnaged.
+- React reacts two time. 
+    - When the props has changed 
+    - When the state has changed
+- **super()**: it calls the base class constructor
+- **componentDidMount()**: it runs after component has been rendered to the DOM
+- if we need state or props object value inside setState, then we should not call this.state, we should pass state and props inside a function. Then we can use the values. In this way we will get the correct value of state and props.
+```js
+// Wrong
+this.setState({
+  counter: this.state.counter + this.props.increment,
+});
+
+
+// Correct
+this.setState((state, props) => ({
+  counter: state.counter + props.increment
+}));
+
+// Correct
+this.setState(function(state, props) {
+  return {
+    counter: state.counter + props.increment
+  };
+});
+```
+
+- React works like a “top-down” or “unidirectional” data flow. 
+

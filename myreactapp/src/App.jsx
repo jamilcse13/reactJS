@@ -1,7 +1,8 @@
-import "./App.css";
+import Clock from "./components/Clock";
+import './App.css'
 
 function App() {
-  return <div>Hello World</div>;
+  return <Clock locale="bn-BD" >Bangladesh</Clock>;
 }
 
 export default App;
