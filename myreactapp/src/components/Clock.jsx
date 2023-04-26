@@ -1,9 +1,9 @@
 import React from "react";
+import Button from "./Button";
 
 class Clock extends React.Component {
   // we don't need to write contructor(props) because we don't use props inside this
-  // we can not write this here
-  state = { date: new Date() };
+  state = { date: new Date(), locale: "bn-BD" };
 
   componentDidMount() {
     this.clockTimer = setInterval(() => this.tick(), 1000);
@@ -13,21 +13,32 @@ class Clock extends React.Component {
     clearInterval(this.clockTimer);
   }
 
+  handleClick = (locale) => {
+    this.setState({
+      locale,
+    });
+  };
+
   tick() {
-     this.setState({
-        date: new Date(),   // this.state.date = new Date() - Never Do That
-      });
+    this.setState({
+      date: new Date(), // this.state.date = new Date() - Never Do That
+    });
   }
 
   render() {
-    const { date } = this.state;
-    const { locale, children } = this.props;
+    console.log('CLock component rendered')
+    const { date, locale } = this.state;
     return (
-      <h1 className="heading">
-        <span className="text">
-          Hello - {children} {date.toLocaleTimeString(locale)}
-        </span>
-      </h1>
+      <div>
+        <h1 className="heading">
+          <span className="text">
+            Hello - {this.props.children} {date.toLocaleTimeString(locale)}
+          </span>
+        </h1>
+        <Button change={this.handleClick} locale={"en-US"}>
+          Click Here
+        </Button>
+      </div>
     );
   }
 }

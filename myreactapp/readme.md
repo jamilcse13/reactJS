@@ -92,3 +92,13 @@ this.setState(function(state, props) {
 
 - React works like a “top-down” or “unidirectional” data flow. 
 
+## Event Handling:
+- If we write a function like this- function(), it will call when the program load
+- If we write a function like this- function, it will call when we hit the function
+- We can prevent default operation in any event using preventDefault() function like this:
+```js
+function handleSubmit(e) {
+  e.preventDefault();
+  console.log('You clicked submit.');
+}
+```
