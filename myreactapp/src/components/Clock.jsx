@@ -26,7 +26,6 @@ class Clock extends React.Component {
   }
 
   render() {
-    console.log('CLock component rendered')
     const { date, locale } = this.state;
     return (
       <div>
