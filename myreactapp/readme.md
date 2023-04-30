@@ -102,3 +102,9 @@ function handleSubmit(e) {
   console.log('You clicked submit.');
 }
 ```
+
+## Forms:
+- In react, we can controll the default DOM by ReactDOM
+- If we pass value in react way, then we will allow react to handle it
+- In we pass the value but not control it by the onChange method. then it will be read-only
+- But if we pass the value={null}, then it won't be read-only. It will be changable.
