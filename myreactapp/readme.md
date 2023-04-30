@@ -108,3 +108,23 @@ function handleSubmit(e) {
 - If we pass value in react way, then we will allow react to handle it
 - In we pass the value but not control it by the onChange method. then it will be read-only
 - But if we pass the value={null}, then it won't be read-only. It will be changable.
+
+## Lifting State Up:
+- The structure tree of the coding approach:
+```
+                        Calculator(temp)
+                            .
+                          .   .
+                        .       .
+                      .            .
+            TemperatureInput       BoilingVerdict
+      (temp, scale, onTempChange)       (celcius)
+```
+- **Noted**:
+    - There should be a single **source of truth** for any dtaa that changes in a React application
+    - Rely on **Top-Down Data FLow** instead of syncing the state between different components
+    - Lifting state involves writing more **boilerplate** code but takes less work to find bugs
+    - We can implement any custom logic to **reject or transform user input**
+    - If something can be **derived** from either props or state, it probably shouldn't be the state
+    - Trace the bugs to their source easily by just moving to the top
+

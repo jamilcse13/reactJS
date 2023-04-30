@@ -1,13 +1,13 @@
-import ClockList from "./components/ClockList";
-import Form from "./components/Form";
-import './App.css'
+import "./App.css";
+import Calculator from "./components/LiftingState/Calculator";
 
 function App() {
   // const quantities = [1,2,3];
   // return <ClockList quantities={quantities} locale="bn-BD" >Bangladesh</ClockList>;
   return (
     <div>
-      <Form/>
+      {/* <Form/> */}
+      <Calculator />
     </div>
   );
 }
