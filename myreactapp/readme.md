@@ -128,3 +128,16 @@ function handleSubmit(e) {
     - If something can be **derived** from either props or state, it probably shouldn't be the state
     - Trace the bugs to their source easily by just moving to the top
 
+## Composition vs Inheritance:
+- Problems in Inheritance:
+    - components are tightly coupled
+    - from child, it's not clear what parents does
+    - not clear about the parent child relation
+    - future components will be tightly coupled which are extends parent class
+    - nested extend - child that already extend other parent
+
+- Composotion:
+    - We use function rather than Class
+    - We use props in lieu of extending a class
+    - In here each fature component extends React.Component, but the binding component (like Text) will be a function
+
