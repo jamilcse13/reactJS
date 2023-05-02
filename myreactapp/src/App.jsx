@@ -1,19 +1,18 @@
 import "./App.css";
-import Calculator from "./components/LiftingState/Calculator";
-// import Text from "./components/inheritence/Text";
+// inheritance
+// import Emoji from "./components/inheritance/Emoji";
+// import Text from "./components/inheritance/Text";
+
+// composition
 import Emoji from "./components/composition/Emoji";
 import Bracket from "./components/composition/Bracket";
 import Text from "./components/composition/Text";
 
 
 function App() {
-  // const quantities = [1,2,3];
-  // return <ClockList quantities={quantities} locale="bn-BD" >Bangladesh</ClockList>;
   return (
     <div>
-      {/* <Form/> */}
-      {/* <Calculator /> */}
-      {/* inheritance */}
+
       {/* <Text/> */}
 
       <Emoji>
