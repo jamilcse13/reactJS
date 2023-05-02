@@ -141,3 +141,18 @@ function handleSubmit(e) {
     - We use props in lieu of extending a class
     - In here each fature component extends React.Component, but the binding component (like Text) will be a function
 
+## Higher Order Components:
+- A higher-order component is a function that takes a component as parameter and returns a new component.
+```js
+const NewComponent = higherOrderComponent(OriginalComponent);
+
+// as like
+const SpiderMan = withCostume(PeterParker);
+
+// in code
+const CountClickButton = withCounter(ClickCounter);
+```
+- As per HOC's naming convention, function name starts with **with**
+- In HOC way, if we need to track any input filed hover count. Then we just create a component using withCounter.
+- We do not repeat the count functionality
+

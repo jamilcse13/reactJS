@@ -5,6 +5,13 @@ import Emoji from "./components/composition/Emoji";
 import Bracket from "./components/composition/Bracket";
 import Text from "./components/composition/Text";
 
+// without hoc
+// import ClickCounter from "./components/hoc/norrmal-process/ClickCounter";
+// import HoverCounter from "./components/hoc/norrmal-process/HoverCounter";
+// with hoc
+import ClickCounter from "./components/hoc/hoc-process/ClickCounter";
+import HoverCounter from "./components/hoc/hoc-process/HoverCounter";
+
 
 function App() {
   // const quantities = [1,2,3];
@@ -16,12 +23,15 @@ function App() {
       {/* inheritance */}
       {/* <Text/> */}
 
-      <Emoji>
+      {/* <Emoji>
         {({addEmoji}) => (
             <Bracket>
               {({addBracket}) => <Text addEmoji={addEmoji} addBracket={addBracket}/>}
             </Bracket>)}
-      </Emoji>      
+      </Emoji>       */}
+
+      <ClickCounter/>
+      <HoverCounter/>
     </div>
   );
 }
