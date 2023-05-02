@@ -23,7 +23,7 @@ export default class Calculator extends React.Component {
         
         <TemperatureInput scale="c" temperature={celcius} onTempuratureChange={this.handleChange}/>
         <TemperatureInput scale="f" temperature={fahrenheit} onTempuratureChange={this.handleChange}/>
-        <BoilingVerdict celcius={parseFloat(temperature)} />
+        <BoilingVerdict celcius={parseFloat(celcius)} />
       </div>
     );
   }
