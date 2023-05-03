@@ -241,3 +241,5 @@ const CountClickButton = withCounter(ClickCounter);
 
 - Summery of Context API:
   ![Alt text](./images/context-api/summery.png "Summery")
+
+- We have created a custom Context class in our project's lib/ directory.
