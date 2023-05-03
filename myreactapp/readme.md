@@ -243,3 +243,6 @@ const CountClickButton = withCounter(ClickCounter);
   ![Alt text](./images/context-api/summery.png "Summery")
 
 - We have created a custom Context class in our project's lib/ directory.
+- ContextWithClass file has the Content component using Class
+- We use a hook **useContext** in functional component
+
