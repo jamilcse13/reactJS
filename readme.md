@@ -17,3 +17,10 @@
 
 ## React Project:
 - myreactapp
+- Some terms you need to know:
+    - Lifting Step Up Pattern
+    - Higher Order Component Pattern:
+    ![Alt text](/images/hoc.jpg "HOC")
+    - Render Props Pattern
+    ![Alt text](/images/render-props.jpg "Render props")
+    - One Way Data Flow
