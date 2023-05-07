@@ -246,3 +246,9 @@ const CountClickButton = withCounter(ClickCounter);
 - ContextWithClass file has the Content component using Class
 - We use a hook **useContext** in functional component
 
+## Hooks:
+- Hooks can not be used inside Class Component. It can only be used in Functional Component
+- We should have to use hooks only top level component. 
+- We can not use it on:
+  - if condition
+  - custom function etc
