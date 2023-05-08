@@ -246,9 +246,62 @@ const CountClickButton = withCounter(ClickCounter);
 - ContextWithClass file has the Content component using Class
 - We use a hook **useContext** in functional component
 
+## Responsibilities of React:
+
+- Render or re-render UI
+- React to user input/actions
+
+  - Render JSX Code
+  - Manage state & props
+  - React Events/Inputs
+  - Evaluating State/Props Change
+
+- **Side-effects**:
+  - Anything other than React's responsibilities
+  - Exm:
+    - Fetching data from any API
+    - Updating DOM
+    - Setting any subscription
+    - Set timer
+
 ## Hooks:
+
 - Hooks can not be used inside Class Component. It can only be used in Functional Component
-- We should have to use hooks only top level component. 
+- We should have to use hooks only top level component.
 - We can not use it on:
   - if condition
   - custom function etc
+
+**useEffect**:
+
+- Reasons of using useEffect Hook:
+  ![Alt text](./images/context-api/useEffect1.png "Reason of useEffect")
+
+  - Help us to perform side effects in functional components
+  - Solves all the problems of lifecycle methods in class componets
+  - We do not need to use React life cycle methods
+
+- Format of useEffect hook:
+
+```js
+// the second part is a condioning array
+// where we put the value for which changes the hook will trigger
+// the array is a dependency array
+// we can only put outside values into the dependency array
+useEffect(() => {
+  document.title = `Clicked ${count} times`;
+}, [count]);
+
+
+// empty array means it will run for once
+// return inside useEffect() means it will work as unmount
+useEffect(() => {
+  const interval = setInterval(tick, 1000);
+
+  // do the cleanup - stop the timer
+  return () => {
+    console.log("component unmounted");
+    clearInterval(interval);
+  };
+}, []);
+```
