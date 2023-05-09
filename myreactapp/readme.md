@@ -272,6 +272,17 @@ const CountClickButton = withCounter(ClickCounter);
   - if condition
   - custom function etc
 
+**useState**:
+
+- We use this hook in lieu of state declaration and it's operation management
+- Format of useState hook:
+
+```js
+const [count, setCount] = useState(0);
+
+setCount((prevCount) => prevCount + 1);
+```
+
 **useEffect**:
 
 - Reasons of using useEffect Hook:
@@ -292,7 +303,6 @@ useEffect(() => {
   document.title = `Clicked ${count} times`;
 }, [count]);
 
-
 // empty array means it will run for once
 // return inside useEffect() means it will work as unmount
 useEffect(() => {
@@ -304,4 +314,39 @@ useEffect(() => {
     clearInterval(interval);
   };
 }, []);
+```
+
+**useCallBack**
+
+- In JavaScript, a function means an aobject and it has a reference value
+- So when parent component renders, eact of its child functions reference is updated. So the functions re-rendered
+- This memorise a function when it rendered first time
+- So the function will not rendered again when some actions occurs the same page
+- Format of useCallback hook:
+
+```js
+// first param of this hook is a function which he stores
+// second param is an array where we put the value for which changes the hook will trigger and restore the function
+// empty array means it will run for once
+const incrementByOne = useCallback(() => {
+  setCount1((prevCount) => prevCount + 1);
+}, []);
+```
+
+**useMemo**
+
+- When we have a fucntion which will render after clicking a button and the function operation is costly.
+- If any actions occured on the parent component, the costly functions called. So the loading time affects in each actions.
+- So we use this hook. It stores the calue of the function in memory and only render when the given values has been changed.
+- It looks similar like useCallback hook.
+- Format of useCallback hook:
+
+```js
+// first param of this hook is a function whose retun value it stores
+// second param is an array where we put the value for which changes the hook will trigger and restore the function's return value
+const isEvenOrOdd = useMemo(() => {
+  let i = 0;
+  while (i < 1000000000) i += 1; // costly operation
+  return count1 % 2 === 0;
+}, [count1]);
 ```
