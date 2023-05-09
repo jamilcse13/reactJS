@@ -16,7 +16,7 @@
 
 
 ## React Project:
-- myreactapp
+- Go to the project [myreactapp](./myreactapp)
 - Some terms you need to know:
     - Lifting Step Up Pattern
     - Higher Order Component Pattern:
