@@ -59,7 +59,7 @@
 
 ### Component:
 
-- Component basically retursns a react element
+- Component basically returns a react element
 - We can reuse a component multiple times
 - We can pass attribute to component
 - We should not change the values of props inside the Component
@@ -350,3 +350,30 @@ const isEvenOrOdd = useMemo(() => {
   return count1 % 2 === 0;
 }, [count1]);
 ```
+
+**useRef**:
+
+- If we want use the refernce in Reat way, then we have to use this hook
+- Format of useCallback hook:
+
+```js
+const inputRef = useRef(null);
+
+useEffect(() => {
+  inputRef.current.focus();
+}, []);
+
+return (
+  <div>
+    <p>
+      <Input ref={inputRef} type="text" placeholder="Type something" />
+    </p>
+  </div>
+);
+```
+- We have to use **React.forwardRef()** if we want to send the ref value from parent class to child class.
+
+- **As a storage:**
+  - We can use this hook as a storage
+  - It will be similar like state but the component will not re-render even if the reference has been changed
+  - Even if the component re-render, the previous reference will be stored
