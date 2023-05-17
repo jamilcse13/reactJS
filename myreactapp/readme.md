@@ -292,7 +292,7 @@ setCount((prevCount) => prevCount + 1);
   - Solves all the problems of lifecycle methods in class componets
   - We do not need to use React life cycle methods
 
-- Format of useEffect hook:
+- Format of useEffect() hook:
 
 ```js
 // the second part is a condioning array
@@ -318,7 +318,7 @@ useEffect(() => {
 
 **useCallBack**
 
-- In JavaScript, a function means an aobject and it has a reference value
+- In JavaScript, a function means an object and it has a reference value
 - So when parent component renders, eact of its child functions reference is updated. So the functions re-rendered
 - This memorise a function when it rendered first time
 - So the function will not rendered again when some actions occurs the same page
@@ -354,7 +354,7 @@ const isEvenOrOdd = useMemo(() => {
 **useRef**:
 
 - If we want use the refernce in Reat way, then we have to use this hook
-- Format of useCallback hook:
+- Format of useCallback() hook:
 
 ```js
 const inputRef = useRef(null);
@@ -377,3 +377,19 @@ return (
   - We can use this hook as a storage
   - It will be similar like state but the component will not re-render even if the reference has been changed
   - Even if the component re-render, the previous reference will be stored
+
+
+  **useReducer**:
+  - This hook uses for state management
+  - This is an alternative of useState() hook
+  - Basically useState() hook created based on useReducer() hook
+  - JS reduce() method vs useReducer() hook:
+  ![Alt text](./images/useReducerHook/reduce-vs-useReduce.png "reduce vs useReduce")
+  - Counter.jsx file for creating a counter with this hook
+  - How action works: example.html
+  - CounterComplex.jsx file for creating multiple counter with one useReucer() hook
+  - we can use this hook with context API
+  - using useState -> GetPost, using useReducer -> GetPost2
+  - In useReducer() hook, we can manage the logic in a central place
+  - When we use useState or useReducer:
+  ![Alt text](./images/useReducerHook/useState-or-useReducer.png "useState ot useReducer")
