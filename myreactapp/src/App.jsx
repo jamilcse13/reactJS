@@ -1,7 +1,11 @@
-import "./App.css";
+// import GetPost from "./components/GetPost";
+import GetPost2 from './components/GetPost2';
+import './App.css';
 
-function App() {
-  return <div>Hello World</div>;
+export default function App() {
+    return (
+        <div className="App">
+            <GetPost2 />
+        </div>
+    );
 }
-
-export default App;
