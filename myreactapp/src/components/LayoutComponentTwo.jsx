@@ -1,22 +1,11 @@
-import { useEffect, useState } from 'react';
+import useWindowWidth from "../hooks/useWindowWidth";
 
 export default function LayoutComponentTwo() {
-    const [onSmallScreen, setOnSmallScreen] = useState(false);
+  const onSmallScreen = useWindowWidth(600);
 
-    const checkScreenSize = () => {
-        setOnSmallScreen(window.innerWidth < 768)
-    };
-
-    useEffect(() => {
-        checkScreenSize();
-        window.addEventListener('resize', checkScreenSize);
-
-        return () => window.removeEventListener('resize', checkScreenSize);
-    }, []);
-
-    return (
-        <div className={onSmallScreen ? 'small' : 'large'}>
-            <h1>This is another component</h1>
-        </div>
-    );
+  return (
+    <div className={onSmallScreen ? "small" : "large"}>
+      <h1>This is another component</h1>
+    </div>
+  );
 }
