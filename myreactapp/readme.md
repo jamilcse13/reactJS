@@ -272,7 +272,7 @@ const CountClickButton = withCounter(ClickCounter);
   - if condition
   - custom function etc
 
-**useState**:
+**useState()**:
 
 - We use this hook in lieu of state declaration and it's operation management
 - Format of useState hook:
@@ -283,7 +283,7 @@ const [count, setCount] = useState(0);
 setCount((prevCount) => prevCount + 1);
 ```
 
-**useEffect**:
+**useEffect()**:
 
 - Reasons of using useEffect Hook:
   ![Alt text](./images/context-api/useEffect1.png "Reason of useEffect")
@@ -316,7 +316,7 @@ useEffect(() => {
 }, []);
 ```
 
-**useCallBack**
+**useCallBack()**
 
 - In JavaScript, a function means an object and it has a reference value
 - So when parent component renders, eact of its child functions reference is updated. So the functions re-rendered
@@ -333,7 +333,7 @@ const incrementByOne = useCallback(() => {
 }, []);
 ```
 
-**useMemo**
+**useMemo()**
 
 - When we have a fucntion which will render after clicking a button and the function operation is costly.
 - If any actions occured on the parent component, the costly functions called. So the loading time affects in each actions.
@@ -351,7 +351,7 @@ const isEvenOrOdd = useMemo(() => {
 }, [count1]);
 ```
 
-**useRef**:
+**useRef()**:
 
 - If we want use the refernce in Reat way, then we have to use this hook
 - Format of useCallback() hook:
@@ -379,7 +379,7 @@ return (
   - Even if the component re-render, the previous reference will be stored
 
 
-  **useReducer**:
+**useReducer()**:
   - This hook uses for state management
   - This is an alternative of useState() hook
   - Basically useState() hook created based on useReducer() hook
